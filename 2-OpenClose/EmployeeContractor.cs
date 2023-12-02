@@ -1,8 +1,10 @@
+using System.ComponentModel;
+
 namespace OpenClose
 {
-  public class EmployeeFullTime : Employee
+  public class EmployeeContractor : Employee
   {
-    public EmployeeFullTime(string fullname, int hoursWorked)
+    public EmployeeContractor(string fullname, int hoursWorked)
     {
       Fullname = fullname;
       HoursWorked = hoursWorked;
@@ -10,9 +12,8 @@ namespace OpenClose
 
     public override decimal CalculateSalaryMonthly()
     {
-      decimal hourValue = 30000M;
+      decimal hourValue = 20000M;
       decimal salary = hourValue * HoursWorked;
-
       return salary;
     }
   }
